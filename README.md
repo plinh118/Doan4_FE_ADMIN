@@ -1,100 +1,69 @@
+# 🎓 Doan4_FE_ADMIN
 
+## 📖 Giới thiệu
+Dự án **Frontend giao diện quản trị** cho đồ án tốt nghiệp, được xây dựng bằng **Next.js** và **ReactJS**.  
+Giao diện được thiết kế thân thiện, dễ mở rộng, hỗ trợ đa ngôn ngữ và quản lý nhiều nghiệp vụ khác nhau như hàng hóa, doanh nghiệp, hợp đồng, tờ khai, vận đơn, hóa đơn, tỷ giá, v.v.
+
+---
+
+## 🚀 Tính năng chính
+- Quản trị người dùng và phân quyền truy cập  
+- Quản lý danh mục (doanh nghiệp, hải quan, đơn vị tính, sản phẩm, nguyên phụ liệu, định mức sản phẩm, quy đổi đơn vị, v.v.)  
+- Quản lý nghiệp vụ (hợp đồng, lô hàng, hóa đơn nhập/xuất, tờ khai, vận đơn, tỷ giá, tiền tệ, v.v.)  
+- Giao diện hiện đại sử dụng **Ant Design**  
+- Hỗ trợ **đa ngôn ngữ (Việt – Anh)**  
+- Cấu trúc module rõ ràng, dễ bảo trì và phát triển
+
+---
+
+## 🧩 Công nghệ sử dụng
+- **Next.js 14**
+- **ReactJS**
+- **Ant Design**
+- **SCSS modules**
+- **React Query**
+- **Yarn**
+
+---
+
+## ⚙️ Hướng dẫn cài đặt và chạy dự án
+
+###  Bước 1: Cài đặt thư viện
+```bash
+yarn install
 ```
-doan3_Quanlytaisan
-├─ .dockerignore
-├─ .env
-├─ .eslintrc.json
-├─ .husky
-│  ├─ pre-commit
-│  └─ _
-│     └─ husky.sh
-├─ .prettierignore
-├─ .prettierrc
-├─ docker-compose.yml
-├─ Dockerfile
-├─ fix_email.py
-├─ messages
-│  ├─ en.json
-│  └─ vi.json
-├─ MYSQL.sql
-├─ next.config.mjs
-├─ package-lock.json
-├─ package.json
-├─ pnpm-lock.yaml
-├─ Procedure.sql
-├─ public
-│  ├─ ai.png
-│  ├─ brain.png
-│  ├─ camera.png
-│  ├─ diamond.png
-│  ├─ expert.png
-│  ├─ favicon.ico
-│  ├─ i.jpg
-│  ├─ image
-│  │  ├─ backgoruLogin.jpg
-│  │  ├─ date.png
-│  │  ├─ logo.png
-│  │  ├─ logotrang.png
-│  │  └─ logotrangnho.png
-│  ├─ left.png
-│  ├─ macbook.jpg
-│  ├─ mission.png
-│  ├─ nextco.png
-│  ├─ partner.png
-│  ├─ products
-│  │  ├─ product-Nền tảng phân tích dữ liệu video Lantana.jpg
-│  │  ├─ product-Phần mềm NextCO.jpg
-│  │  ├─ product-Phần mềm quản lý nhân sự HRM.jpg
-│  │  ├─ product-Phần mềm SCA.jpg
-│  │  └─ product-Phần mềm SmartChat.jpg
-│  ├─ right.png
-│  ├─ slideshow1.jpg
-│  ├─ slideshow2.jpg
-│  ├─ slideshow3.jpg
-│  ├─ tamgiac.png
-│  ├─ tamgiacnguoc.png
-│  ├─ trainings
-│  │  ├─ training-AI & BigData for CTO.jpg
-│  │  ├─ training-AI Ethics.jpg
-│  │  ├─ training-AI for CEO.jpg
-│  │  ├─ training-AI for Kids.jpg
-│  │  ├─ training-AISTEAM.jpg
-│  │  ├─ training-Blockchain.jpg
-│  │  ├─ training-Data Visualization.jpg
-│  │  ├─ training-Kỹ năng sử dụng AI trong văn phòng.jpg
-│  │  ├─ training-Làm chủ AI và No - code.jpg
-│  │  └─ training-Phân tích dữ liệu lớn.jpg
-│  ├─ trangcam.png
-│  ├─ uploads
-│  │  └─ cac-so-dac-trung-do-muc-do-phan-tan-cua-mau-so-lieu-ghep-nhom-toan-12-chuong-trinh-moi_removed.pdf
-│  ├─ value.png
-│  └─ valuemission.png
+### Bước 2: Chạy dự án
+```bash
+yarn dev
+```
+
+Sau khi chạy, mở trình duyệt tại http://localhost:3000
+
+### 💻 Yêu cầu hệ thống
+- Node.js >= 18
+
+- Yarn >= 1.22
+
+- Trình duyệt Chrome, Edge hoặc Firefox bản mới nhất
+
+### 📂 Cấu trúc thư mục
+```bash
+Doan4_FE_ADMIN
 ├─ src
 │  ├─ app
 │  │  ├─ layout.tsx
 │  │  ├─ not-found.tsx
 │  │  ├─ page.tsx
-│  │  └─ [locale]
+│  │  └─ [locale]    -- CHỨA GIAO DIỆN
 │  │     ├─ AppProvider.tsx
 │  │     ├─ auth
 │  │     │  ├─ login
-│  │     │  │  └─ page.tsx
+│  │     │  │  └─ page.tsx  -- TÊN BẮT BUỘC LÀ PAGE ĐỂ CÓ THỂ TỰ BẮT ROUTER
 │  │     │  ├─ register
 │  │     │  │  └─ page.tsx
 │  │     │  └─ resetPassword
 │  │     │     └─ page.tsx
-│  │     ├─ home_user
-│  │     │  ├─ Home.module.scss
-│  │     │  ├─ home_product
-│  │     │  │  ├─ page.tsx
-│  │     │  │  └─ product.module.scss
-│  │     │  ├─ home_research
-│  │     │  │  ├─ page.tsx
-│  │     │  │  └─ ResearchSection.module.scss
-│  │     │  ├─ home_trainingcouse
-│  │     │  │  ├─ page.tsx
-│  │     │  │  └─ trainingcouse.module.scss
-│  │     │  ├─ layout.tsx
+│  │     ├─ dashboard
 │  │     │  └─ page.tsx
 │  │     ├─ layout.tsx
 │  │     ├─ page.tsx
@@ -143,38 +112,6 @@ doan3_Quanlytaisan
 │  │           │  └─ page.tsx
 │  │           └─ VanDonXuat
 │  │              └─ page.tsx
-│  ├─ assets
-│  │  ├─ fonts
-│  │  │  ├─ mono-sans
-│  │  │  │  └─ Mona-Sans-f258701679eace96725e03121950af40ae6e4ceef03b21242c66a3b7ae6ccbf4.woff2
-│  │  │  ├─ reddit-sans
-│  │  │  │  ├─ OFL.txt
-│  │  │  │  ├─ README.txt
-│  │  │  │  ├─ RedditSans-Italic-VariableFont_wght.ttf
-│  │  │  │  ├─ RedditSans-VariableFont_wght.ttf
-│  │  │  │  └─ static
-│  │  │  │     ├─ RedditSans-Black.ttf
-│  │  │  │     ├─ RedditSans-BlackItalic.ttf
-│  │  │  │     ├─ RedditSans-Bold.ttf
-│  │  │  │     ├─ RedditSans-BoldItalic.ttf
-│  │  │  │     ├─ RedditSans-ExtraBold.ttf
-│  │  │  │     ├─ RedditSans-ExtraBoldItalic.ttf
-│  │  │  │     ├─ RedditSans-ExtraLight.ttf
-│  │  │  │     ├─ RedditSans-ExtraLightItalic.ttf
-│  │  │  │     ├─ RedditSans-Italic.ttf
-│  │  │  │     ├─ RedditSans-Light.ttf
-│  │  │  │     ├─ RedditSans-LightItalic.ttf
-│  │  │  │     ├─ RedditSans-Medium.ttf
-│  │  │  │     ├─ RedditSans-MediumItalic.ttf
-│  │  │  │     ├─ RedditSans-Regular.ttf
-│  │  │  │     ├─ RedditSans-SemiBold.ttf
-│  │  │  │     └─ RedditSans-SemiBoldItalic.ttf
-│  │  │  └─ sf-pro
-│  │  │     ├─ SF-Pro-Display-Bold.ttf
-│  │  │     ├─ SF-Pro-Display-Light.ttf
-│  │  │     ├─ SF-Pro-Display-Medium.ttf
-│  │  │     ├─ SF-Pro-Display-Regular.ttf
-│  │  │     └─ SF-Pro-Display-Semibold.ttf
 │  │  ├─ images
 │  │  │  ├─ auth
 │  │  │  │  └─ login-bg.jpeg
@@ -212,77 +149,101 @@ doan3_Quanlytaisan
 │  │        └─ vn.svg
 │  ├─ components
 │  │  ├─ DinhMucSanPham
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ component
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ DoanhNghiep
-│  │  │  ├─ form.tsx
-│  │  │  └─ table.tsx
+│  │  │  ├─ component
+│  │  │  │  ├─ form.tsx
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ DonViTinh
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData_HaiQuan.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ component
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData_HaiQuan.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ HaiQuan
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData_HaiQuan.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ component
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData_HaiQuan.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ HoaDonNhap
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ HoaDonXuat
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
-│  │  ├─ home_user
-│  │  │  ├─ footer.tsx
-│  │  │  ├─ Header.module.scss
-│  │  │  ├─ header_home.tsx
-│  │  │  ├─ modal_Consult
-│  │  │  │  ├─ ConsultationFormModal.module.scss
-│  │  │  │  └─ index.tsx
-│  │  │  └─ styles.scss
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ HopDong
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ LoHang
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ component
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ NguyenPhuLieu
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ QuyDoiDonViDN
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData_HaiQuan.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData_HaiQuan.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ QuyDoiDonViSP
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ component
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ SanPham
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ TienTe
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData_TienTe.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData_TienTe.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ ToKhaiNhap
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ ToKhaiXuat
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  ├─ TyGia
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
-│  │  ├─ UI_shared
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
+│  │  ├─ UI_shared        -- CÁC GIAO DIỆN DÙNG CHUNG
 │  │  │  ├─ Children_Head.tsx
 │  │  │  ├─ ColumType.tsx
 │  │  │  ├─ ExportExcel.tsx
@@ -290,41 +251,24 @@ doan3_Quanlytaisan
 │  │  │  ├─ Product_Customer_Modal.tsx
 │  │  │  └─ Table.tsx
 │  │  ├─ VanDonNhap
-│  │  │  ├─ form.tsx
-│  │  │  ├─ mockData.ts
-│  │  │  └─ table.tsx
+│  │  │  ├─ components
+│  │  │  │  ├─ form.tsx
+│  │  │  │  ├─ mockData.ts
+│  │  │  │  └─ table.tsx
+│  │  │  └─ index.tsx
 │  │  └─ VanDonXuat
-│  │     ├─ form.tsx
-│  │     ├─ mockData.ts
-│  │     └─ table.tsx
+│  │     ├─ components
+│  │     │  ├─ form.tsx
+│  │     │  ├─ mockData.ts
+│  │     │  └─ table.tsx
+│  │     └─ index.tsx
 │  ├─ constants
 │  │  ├─ config.ts
 │  │  └─ theme.ts
 │  ├─ i18n.ts
 │  ├─ libs
 │  │  ├─ api
-│  │  │  ├─ asset-sign-away.ts
-│  │  │  ├─ asset.api.ts
-│  │  │  ├─ auth.api.ts
-│  │  │  ├─ consutl.api.ts
-│  │  │  ├─ customer.api.ts
-│  │  │  ├─ customer_link.api.ts
-│  │  │  ├─ dashBoard.api.ts
-│  │  │  ├─ department.api.ts
-│  │  │  ├─ division.api.ts
-│  │  │  ├─ document.api.ts
-│  │  │  ├─ IntellectualProperty.api.ts
-│  │  │  ├─ newupload.ts
-│  │  │  ├─ partner.api.ts
-│  │  │  ├─ personnel.api.ts
-│  │  │  ├─ position.api.ts
-│  │  │  ├─ product.api.ts
-│  │  │  ├─ project.api.ts
-│  │  │  ├─ services.api.ts
-│  │  │  ├─ topic.api.ts
-│  │  │  ├─ trainingCouse.api.ts
-│  │  │  ├─ upload.api.ts
-│  │  │  └─ user.api.ts
+│  │  │  └─ auth.api.ts
 │  │  ├─ api.ts
 │  │  ├─ call_API.ts
 │  │  ├─ db.ts
@@ -372,7 +316,7 @@ doan3_Quanlytaisan
 │  │        └─ siderbar.tsx
 │  ├─ stores
 │  │  └─ color.store.ts
-│  └─ utils
+│  └─ utils     -- CHỨA CÁC validator 
 │     ├─ colors.ts
 │     ├─ date.ts
 │     ├─ format-string.ts
@@ -385,33 +329,6 @@ doan3_Quanlytaisan
 │     ├─ storage.ts
 │     └─ validator.ts
 ├─ tsconfig.json
-├─ uploads
-│  ├─ 1741832514185-aaaaaaaaaaaaaaaaaaaaaaaaaaaa.jpg
-│  ├─ 1741836488225-landscape-photography_1645.jpg
-│  ├─ 1741838600171-assssssssssssssssss.JPG
-│  ├─ 1741838733658-mặt lạ.jpg
-│  ├─ 1741840595830-Du_an_noi_bo_Master_Plan_updated (4) (1).xlsx
-│  ├─ 1741840637904-Du_an_noi_bo_Master_Plan_updated (4) (1).xlsx
-│  ├─ 1741840838279-Du_an_noi_bo_Master_Plan_updated (4) (1).xlsx
-│  ├─ 1741840838314-thuvienhoclieu.com-Chuyen-de-5-Luy-thua-voi-so-mu-tu-nhien-Toan-6 (1).docx
-│  ├─ 1741840838355-PhamThanhLongBaoCaoTuan (2).pdf
-│  ├─ 1741841297208-Du_an_noi_bo_Master_Plan_updated (4) (1).xlsx
-│  ├─ 1741841297236-PhamThanhLongBaoCaoTuan (2).pdf
-│  ├─ 1741841297252-Bùi Xuân Hoàng.pdf
-│  ├─ 1741849505873-thuvienhoclieu.com-Chuyen-de-5-Luy-thua-voi-so-mu-tu-nhien-Toan-6 (1).docx
-│  ├─ 1741849505885-chuyen-de-khai-phong-nang-luc-mon-toan-6-đã xoay.pdf
-│  ├─ 1741850267185-Du_an_noi_bo_Master_Plan_updated (4) (1).xlsx
-│  ├─ 1741850267189-nghii-a-ii-nh40-2017-1737736379598-608277643.docx
-│  ├─ 1741853306125-danh_sach_lop (1).xlsx
-│  ├─ 1741853320485-danh_sach_lop (1).xlsx
-│  ├─ 1741853407309-20 ĐỀ THI HỌC KÌ 1 TOÁN 4.pdf
-│  ├─ 1741854882887-eye.jpg
-│  ├─ 1741854923193-yyyyy.docx.pdf
-│  ├─ 1741860041043-mặt lạ.jpg
-│  ├─ 1743937402784-MẪU-GIẤY-CÁC-MÔN (2).docx
-│  ├─ 1743937424856-MẪU-GIẤY-CÁC-MÔN (2).docx
-│  ├─ 1744027203985-user.ico
-│  └─ 1744031190781-ams_asset.xlsx
 └─ yarn.lock
 
 ```
